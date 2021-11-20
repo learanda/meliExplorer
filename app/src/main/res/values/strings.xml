@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Meli Explorer</string>
+    <string name="hello">Hola ser vivo!</string>
+    <string name="hello_lan">Hola Lan 😎</string>
+</resources>
