@@ -15,10 +15,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        hola()
     }
 
-    private fun hola() {
-        binding.lan.text = getString(R.string.hello_lan)
-    }
+
 }
