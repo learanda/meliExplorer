@@ -4,4 +4,7 @@
     <string name="hello_lan">Hola Lan 😎</string>
     <string name="search_articles">SEARCH ARTICLES</string>
     <string name="random_article">RANDOM ARTICLE</string>
+    <string name="title">Title</string>
+    <string name="article_picture">Article picture</string>
+    <string name="price">Price</string>
 </resources>

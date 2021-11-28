@@ -37,4 +37,9 @@
 
         <item name="android:background">@color/white_two</item>
     </style>
+
+    <style name="Theme.MeliArticlesViews" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:background">@color/grey</item>
+    </style>
 </resources>
