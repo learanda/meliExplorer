@@ -1,7 +1,9 @@
 package ar.leandro.meliexplorer.data
 
-import ar.leandro.meliexplorer.domain.Article
-import ar.leandro.meliexplorer.domain.Articles
+import ar.leandro.meliexplorer.domain.model.Article
+import ar.leandro.meliexplorer.domain.model.Articles
+import ar.leandro.meliexplorer.domain.MeliApiRetrofit
+import ar.leandro.meliexplorer.domain.MeliRepo
 
 class MeliApiRepoImpl: MeliRepo {
 

@@ -1,7 +1,7 @@
-package ar.leandro.meliexplorer.data
+package ar.leandro.meliexplorer.domain
 
-import ar.leandro.meliexplorer.domain.Article
-import ar.leandro.meliexplorer.domain.Articles
+import ar.leandro.meliexplorer.domain.model.Article
+import ar.leandro.meliexplorer.domain.model.Articles
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -13,13 +13,13 @@ interface MeLiApi {
         const val ARG: String = "MLA"
     }
 
-    @GET("sites/${ARG}/search")
+    @GET("sites/$ARG/search")
     suspend fun getArticles(@Query("q") query: String): Response<Articles>
 
     @GET("items/{itemId}")
     suspend fun getItem(@Path("itemId") id: String): Response<Article>
 
-    @GET("sites/${ARG}/search")
+    @GET("sites/$ARG/search")
     suspend fun getSellerArticles(@Query("seller_id") id: String): Response<Articles>
 
 }

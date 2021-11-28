@@ -1,7 +1,7 @@
-package ar.leandro.meliexplorer.data
+package ar.leandro.meliexplorer.domain
 
-import ar.leandro.meliexplorer.domain.Article
-import ar.leandro.meliexplorer.domain.Articles
+import ar.leandro.meliexplorer.domain.model.Article
+import ar.leandro.meliexplorer.domain.model.Articles
 import com.google.gson.Gson
 import retrofit2.Response
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package ar.leandro.meliexplorer.domain
+package ar.leandro.meliexplorer.domain.model
 
 data class Seller(
     var id: String,
