@@ -18,7 +18,7 @@ class MeliApiRetrofit {
         return retrofit.create(MeLiApi::class.java)
     }
 
-    suspend fun getArticles(query: String): Response<Articles> {
+    suspend fun getArticles(query: String): Response<List<Article>> {
         return getAPI().getArticles(query)
     }
 

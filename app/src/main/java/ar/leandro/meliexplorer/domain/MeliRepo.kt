@@ -5,7 +5,7 @@ import ar.leandro.meliexplorer.domain.model.Articles
 
 interface MeliRepo {
 
-    suspend fun searchArticles(query: String): Articles
+    suspend fun searchArticles(query: String): List<Article>
 
     suspend fun searchItem(id: String): Article
 
