@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
 
-    val articlesList = MutableLiveData<Articles>()
+    val articlesList = MutableLiveData<List<Article>>()
     val articlesListException = MutableLiveData<Throwable>()
     val item = MutableLiveData<Article>()
     val itemException = MutableLiveData<Throwable>()
@@ -20,7 +20,12 @@ class MainViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
     fun findArticles(query: String) {
         viewModelScope.launch {
             try {
-                articlesList.value = meliRepoImpl.searchArticles(query)
+                val repoArticles = meliRepoImpl.searchArticles(query)
+                val repoArticlesList: MutableList<Article> = mutableListOf()
+                repoArticlesList.addAll(repoArticles)
+
+                articlesList.value = repoArticlesList
+
             } catch (e: Exception) {
                 articlesListException.value = e
             }
