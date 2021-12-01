@@ -13,7 +13,7 @@ class MeliApiRepoImpl: MeliRepo {
         return response.body()!!
     }
 
-    override suspend fun searchItem(id: String): Article {
+    /*override suspend fun searchItem(id: String): Article {
 
         val response = MeliApiRetrofit().getItem(id)
         return response.body()!!
@@ -23,5 +23,5 @@ class MeliApiRepoImpl: MeliRepo {
 
         val response = MeliApiRetrofit().getSellerArticles(id)
         return response.body()!!
-    }
+    }*/
 }

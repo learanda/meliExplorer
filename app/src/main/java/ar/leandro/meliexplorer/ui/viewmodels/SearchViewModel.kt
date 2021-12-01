@@ -8,7 +8,7 @@ import ar.leandro.meliexplorer.domain.model.Article
 import ar.leandro.meliexplorer.domain.model.Articles
 import kotlinx.coroutines.launch
 
-class MainViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
+class SearchViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
 
     val articlesList = MutableLiveData<List<Article>>()
     val articlesListException = MutableLiveData<Throwable>()
@@ -32,7 +32,7 @@ class MainViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
         }
     }
 
-    fun findItem(id: String) {
+    /*fun findItem(id: String) {
         viewModelScope.launch {
             try {
                 item.value = meliRepoImpl.searchItem(id)
@@ -50,5 +50,5 @@ class MainViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
                 sellerArticlesException.value = e
             }
         }
-    }
+    }*/
 }

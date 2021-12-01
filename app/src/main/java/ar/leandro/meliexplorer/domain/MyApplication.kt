@@ -2,7 +2,7 @@ package ar.leandro.meliexplorer.domain
 
 import android.app.Application
 import ar.leandro.meliexplorer.data.MeliApiRepoImpl
-import ar.leandro.meliexplorer.ui.viewmodels.MainViewModel
+import ar.leandro.meliexplorer.ui.viewmodels.SearchViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -12,7 +12,7 @@ import org.koin.dsl.module
 class MyApplication : Application() {
     private val appModule = module {
         single<MeliRepo> { MeliApiRepoImpl() }
-        viewModel { MainViewModel(get()) }
+        viewModel { SearchViewModel(get()) }
     }
 
     override fun onCreate() {

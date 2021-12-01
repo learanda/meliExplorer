@@ -7,7 +7,7 @@ interface MeliRepo {
 
     suspend fun searchArticles(query: String): List<Article>
 
-    suspend fun searchItem(id: String): Article
+    /*suspend fun searchItem(id: String): Article
 
-    suspend fun searchSellerArticles(id: String): Articles
+    suspend fun searchSellerArticles(id: String): Articles*/
 }

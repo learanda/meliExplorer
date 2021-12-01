@@ -22,11 +22,11 @@ class MeliApiRetrofit {
         return getAPI().getArticles(query)
     }
 
-    suspend fun getItem(id: String): Response<Article> {
+    /*suspend fun getItem(id: String): Response<Article> {
         return getAPI().getItem(id)
     }
 
     suspend fun getSellerArticles(id: String): Response<Articles> {
         return getAPI().getSellerArticles(id)
-    }
+    }*/
 }
