@@ -40,6 +40,6 @@
 
     <style name="Theme.MeliArticlesViews" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
-        <item name="android:background">@color/grey</item>
+        <item name="android:background">@color/light_yellow</item>
     </style>
 </resources>
