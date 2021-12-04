@@ -14,7 +14,7 @@ interface MeLiApi {
     }
 
     @GET("sites/$ARG/search")
-    suspend fun getArticles(@Query("q") query: String): Response<List<Article>>
+    suspend fun getArticles(@Query("q") query: String): Response<Articles>
 
     /*@GET("items/{itemId}")
     suspend fun getItem(@Path("itemId") id: String): Response<Article>

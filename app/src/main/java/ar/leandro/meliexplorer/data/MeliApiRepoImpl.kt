@@ -7,7 +7,7 @@ import ar.leandro.meliexplorer.domain.MeliRepo
 
 class MeliApiRepoImpl: MeliRepo {
 
-    override suspend fun searchArticles(query: String): List<Article> {
+    override suspend fun searchArticles(query: String): Articles {
 
         val response = MeliApiRetrofit().getArticles(query)
         return response.body()!!
