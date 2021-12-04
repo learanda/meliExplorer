@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import ar.leandro.meliexplorer.R
 import ar.leandro.meliexplorer.databinding.ActivitySearchBinding
 import ar.leandro.meliexplorer.domain.ItemArticlesAdapter
+import ar.leandro.meliexplorer.domain.model.Article
+import ar.leandro.meliexplorer.domain.model.Articles
 import ar.leandro.meliexplorer.ui.viewmodels.SearchViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import retrofit2.HttpException
@@ -22,8 +25,13 @@ class SearchActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        var noItems = emptyList<Article>()
+        val adapter = ItemArticlesAdapter(noItems)
+        binding.rvArticles.layoutManager = LinearLayoutManager(this)
+        binding.rvArticles.adapter = adapter
+
         setListeners()
-        setObservers()
+        setObservers(adapter)
     }
 
     private fun setListeners() {
@@ -32,10 +40,11 @@ class SearchActivity : AppCompatActivity() {
         }
     }
 
-    private fun setObservers() {
+    private fun setObservers(adapter: ItemArticlesAdapter) {
         vm.articlesList.observe(this, {
             if (it != null) {
-                binding.rvArticles.adapter = ItemArticlesAdapter(it)
+                //binding.rvArticles.adapter = ItemArticlesAdapter(it)
+                adapter.setListData(it)
             }
         })
         vm.articlesListException.observe(this, this::handleException)
