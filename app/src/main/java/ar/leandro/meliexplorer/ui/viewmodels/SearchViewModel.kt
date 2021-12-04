@@ -21,8 +21,9 @@ class SearchViewModel(val meliRepoImpl: MeliRepo) : ViewModel() {
         viewModelScope.launch {
             try {
                 val repoArticles = meliRepoImpl.searchArticles(query)
+                var arrayOfArticles = repoArticles.results
                 val repoArticlesList: MutableList<Article> = mutableListOf()
-                repoArticlesList.addAll(repoArticles)
+                repoArticlesList.addAll(arrayOfArticles)
 
                 articlesList.value = repoArticlesList
 
